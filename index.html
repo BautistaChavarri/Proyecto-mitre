@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ramal Bartolomé Mitre | Trenes Argentinos</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Libre+Franklin:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e2e2e2",
+            "surface-dim": "#dadada",
+            "secondary-fixed-dim": "#78d1ff",
+            "on-primary-container": "#ebf2ff",
+            "surface-variant": "#e2e2e2",
+            "secondary": "#006689",
+            "on-secondary-container": "#004d69",
+            "secondary-fixed": "#c3e8ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#f1f0ff",
+            "on-primary-fixed-variant": "#00497b",
+            "surface-container-high": "#e8e8e8",
+            "status-normal": "#2E7D32",
+            "outline-variant": "#c0c7d2",
+            "on-primary-fixed": "#001d35",
+            "on-background": "#1a1c1c",
+            "primary": "#005994",
+            "on-tertiary-fixed-variant": "#3d4569",
+            "on-secondary": "#ffffff",
+            "background": "#f9f9f9",
+            "on-primary": "#ffffff",
+            "surface-bright": "#f9f9f9",
+            "primary-fixed-dim": "#9ccaff",
+            "tertiary-fixed": "#dde1ff",
+            "inverse-surface": "#2f3131",
+            "on-surface": "#1a1c1c",
+            "background-alt": "#EEEEEE",
+            "tertiary-fixed-dim": "#bdc4f0",
+            "surface-tint": "#0062a1",
+            "on-error-container": "#93000a",
+            "surface": "#f9f9f9",
+            "inverse-primary": "#9ccaff",
+            "on-error": "#ffffff",
+            "secondary-container": "#34c3fe",
+            "inverse-on-surface": "#f1f1f1",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f3f3f3",
+            "tertiary": "#4c5479",
+            "primary-fixed": "#d0e4ff",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#eeeeee",
+            "primary-container": "#0072bb",
+            "on-secondary-fixed-variant": "#004d68",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#646c93",
+            "on-secondary-fixed": "#001e2c",
+            "outline": "#717882",
+            "on-tertiary-fixed": "#11193b",
+            "status-alert": "#EE3D44",
+            "on-surface-variant": "#404751",
+            "status-warning": "#FFD700"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            base: "8px",
+            "margin-desktop": "32px",
+            "container-max": "1200px",
+            "margin-mobile": "16px",
+            gutter: "24px"
+          },
+          fontFamily: {
+            "label-md": ["Montserrat"],
+            "body-md": ["Libre Franklin"],
+            "headline-lg-mobile": ["Montserrat"],
+            "label-sm": ["Montserrat"],
+            "headline-md": ["Montserrat"],
+            "body-lg": ["Libre Franklin"],
+            "headline-lg": ["Montserrat"],
+            "display-lg": ["Montserrat"]
+          },
+          fontSize: {
+            "label-md": ["14px", { lineHeight: "20px", fontWeight: "600" }],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+            "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  <!-- TopAppBar -->
+  <header role="banner" class="bg-primary dark:bg-on-primary-fixed fixed top-0 w-full z-50">
+    <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
+      <div class="flex items-center gap-8">
+        <span class="text-label-md font-label-md font-bold text-on-primary">Trenes Argentinos - Mitre</span>
+        <nav class="hidden md:flex gap-6" aria-label="Menú principal">
+          <a class="nav-link nav-active text-on-primary font-medium transition-colors font-label-md text-label-md" href="index.html" aria-current="page">Ramales</a>
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="mapas.html">Mapas</a>
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="horarios.html">Horarios</a>
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="tarifas.html">Tarifas</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-4">
+        <form role="search" aria-label="Buscar estación" class="bg-white/10 rounded-lg px-3 py-1.5 flex items-center gap-2">
+          <span class="material-symbols-outlined" aria-hidden="true">search</span>
+          <label class="sr-only" for="search-input">Buscar estación</label>
+          <input id="search-input" class="bg-transparent border-none text-on-primary placeholder-on-primary/60 text-label-sm focus:ring-0 w-32 md:w-48" placeholder="Buscar estación..." type="search">
+        </form>
+        <button type="button" class="text-on-primary cursor-pointer" aria-label="Abrir perfil">
+          <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="flex pt-16 min-h-screen">
+    <!-- SideNavBar -->
+    <aside aria-label="Panel lateral" class="hidden md:flex flex-col w-64 h-[calc(100vh-64px)] p-base sticky top-16 bg-surface dark:bg-surface-dim border-r border-outline-variant">
+      <div class="mb-8 px-4 pt-4">
+        <h2 class="text-headline-md font-headline-md text-primary">Línea Mitre</h2>
+        <p class="text-label-sm font-label-sm text-on-surface-variant">Portal Informativo</p>
+      </div>
+      <nav class="space-y-2" aria-label="Navegación de ramales">
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors font-label-md text-label-md" href="#">
+          <span class="material-symbols-outlined" aria-hidden="true">train</span> Tigre
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors font-label-md text-label-md" href="#">
+          <span class="material-symbols-outlined" aria-hidden="true">train</span> Suárez
+        </a>
+        <a aria-current="page" class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-bold font-label-md text-label-md" href="#">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">train</span> Mitre
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors font-label-md text-label-md" href="#">
+          <span class="material-symbols-outlined" aria-hidden="true">warning</span> Alertas
+        </a>
+      </nav>
+      <div class="mt-auto p-4">
+        <div class="bg-primary/5 rounded-xl p-4 border border-primary/10">
+          <p class="text-label-sm font-bold text-primary mb-2">¿Necesitás ayuda?</p>
+          <button type="button" class="w-full bg-primary text-on-primary py-2 rounded-lg text-label-sm font-bold">CONTACTAR</button>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main id="main-content" class="flex-1 px-4 md:px-margin-desktop py-8 max-w-5xl mx-auto">
+      <!-- Branch Header Section -->
+      <section class="mb-12">
+        <div class="relative rounded-3xl overflow-hidden h-[300px] mb-8 group">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuenMV_ORY7rAk3c1PXQRCCtjaz4mwfk6577MwEnt7bwe6ZOKyMiNulOi1VrSY927jjInsjVdnjc85AxVcdiq9hz1f-bfSj0ZELGY9fTS7NBtn0Qm9BKV8IeooAFafb0Q9dt0B6Zd68u99UaLQ-QEKmcOQCZcSzg0m06yeC1gIUBS5i1We8w4g6LyAXv2C8tNnW-9ode7fhkEM-JXLmkKhhrHz9Yqof6qE2Yyt2bXBnVMYH4Vnt4tblJ5Ohy_83kDQHihozRNtww" alt="Vista de la estación Retiro con un tren en el andén">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8 md:p-12">
+            <div class="flex items-center gap-3 text-secondary-fixed mb-2">
+              <span class="material-symbols-outlined" aria-hidden="true">route</span>
+              <span class="text-label-md font-bold tracking-widest uppercase">Ramal Bartolomé Mitre</span>
+            </div>
+            <h1 class="text-on-primary font-headline-lg text-headline-lg md:text-display-lg leading-tight mb-2">Retiro - B. Mitre</h1>
+            <p class="text-on-primary/80 max-w-2xl font-body-lg">Conectando el centro de la ciudad con la zona norte, brindando un servicio esencial para miles de trabajadores y estudiantes.</p>
+          </div>
+        </div>
+        <!-- Status Banner -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-status-normal/10 border border-status-normal/20 rounded-2xl p-6 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-status-normal flex items-center justify-center text-white">
+              <span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            </div>
+            <div>
+              <p class="text-label-sm font-bold text-status-normal uppercase">Estado del Servicio</p>
+              <p class="text-headline-md font-headline-md text-on-surface">Servicio Normal</p>
+            </div>
+          </div>
+          <div class="bg-surface-container rounded-2xl p-6 flex items-center gap-4 border border-outline-variant">
+            <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+              <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+            </div>
+            <div>
+              <p class="text-label-sm font-bold text-primary uppercase">Frecuencia</p>
+              <p class="text-headline-md font-headline-md text-on-surface">Cada 25 - 35 min</p>
+            </div>
+          </div>
+          <div class="bg-secondary-fixed rounded-2xl p-6 flex items-center gap-4 border border-secondary/10">
+            <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
+              <span class="material-symbols-outlined" aria-hidden="true">transfer_within_a_station</span>
+            </div>
+            <div>
+              <p class="text-label-sm font-bold text-secondary uppercase">Combinación</p>
+              <p class="text-headline-md font-headline-md text-on-surface">Tren de la Costa</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stations List (Asymmetric Bento Layout) -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-12">
+        <!-- Station Timeline (Left Column) -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-8 border border-outline-variant shadow-sm">
+          <div class="flex items-center justify-between mb-8">
+            <h3 class="text-headline-md font-headline-md text-primary">Recorrido y Estaciones</h3>
+            <span class="text-label-sm font-bold text-on-surface-variant bg-surface-container px-3 py-1 rounded-full">11 Estaciones</span>
+          </div>
+          <div class="space-y-0" role="list" aria-label="Lista de estaciones">
+            <div class="station-item flex items-center gap-6 group" role="listitem">
+              <div class="station-dot relative w-10 flex flex-col items-center">
+                <div class="w-4 h-4 rounded-full bg-primary border-4 border-white shadow-md z-10 group-hover:scale-125 transition-transform"></div>
+              </div>
+              <div class="flex-1 py-4 flex items-center justify-between border-b border-outline-variant/30 group-hover:bg-primary/5 transition-colors px-4 rounded-xl">
+                <div>
+                  <h4 class="font-bold text-on-surface text-body-lg">Retiro</h4>
+                  <div class="flex gap-2 mt-1">
+                    <span class="px-2 py-0.5 bg-secondary-container/20 text-on-secondary-container text-[10px] font-bold rounded uppercase">Subte C</span>
+                    <span class="px-2 py-0.5 bg-secondary-container/20 text-on-secondary-container text-[10px] font-bold rounded uppercase">Terminal</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined station-action-icon text-outline group-hover:text-primary transition-colors" aria-hidden="true">chevron_right</span>
+              </div>
+            </div>
+            <div class="station-item flex items-center gap-6 group" role="listitem">
+              <div class="station-dot relative w-10 flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-outline border-2 border-white z-10 group-hover:bg-primary transition-colors"></div>
+              </div>
+              <div class="flex-1 py-4 flex items-center justify-between border-b border-outline-variant/30 group-hover:bg-primary/5 transition-colors px-4 rounded-xl">
+                <h4 class="font-medium text-on-surface-variant text-body-md">3 de Febrero</h4>
+                <span class="material-symbols-outlined station-action-icon text-outline group-hover:text-primary transition-colors" aria-hidden="true">chevron_right</span>
+              </div>
+            </div>
+            <div class="station-item flex items-center gap-6 group" role="listitem">
+              <div class="station-dot relative w-10 flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-outline border-2 border-white z-10 group-hover:bg-primary transition-colors"></div>
+              </div>
+              <div class="flex-1 py-4 flex items-center justify-between border-b border-outline-variant/30 group-hover:bg-primary/5 transition-colors px-4 rounded-xl">
+                <div>
+                  <h4 class="font-medium text-on-surface-variant text-body-md">Mtro. Carranza</h4>
+                  <span class="px-2 py-0.5 bg-secondary-container/20 text-on-secondary-container text-[10px] font-bold rounded uppercase">Subte D</span>
+                </div>
+                <span class="material-symbols-outlined station-action-icon text-outline group-hover:text-primary transition-colors" aria-hidden="true">chevron_right</span>
+              </div>
+            </div>
+            <div class="station-item flex items-center gap-6 group" role="listitem">
+              <div class="station-dot relative w-10 flex flex-col items-center">
+                <div class="w-4 h-4 rounded-full bg-primary border-4 border-white shadow-md z-10 group-hover:scale-125 transition-transform"></div>
+              </div>
+              <div class="flex-1 py-4 flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low px-4 rounded-xl">
+                <div>
+                  <h4 class="font-bold text-on-surface text-body-lg">Belgrano R</h4>
+                  <p class="text-label-sm text-primary font-bold">Empalme Ramal Suárez</p>
+                </div>
+                <span class="material-symbols-outlined" aria-hidden="true">hub</span>
+              </div>
+            </div>
+            <div class="station-item flex items-center gap-6 group" role="listitem">
+              <div class="station-dot relative w-10 flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-outline border-2 border-white z-10"></div>
+              </div>
+              <div class="flex-1 py-4 flex items-center justify-between border-b border-outline-variant/30 group-hover:bg-primary/5 transition-colors px-4 rounded-xl">
+                <h4 class="font-medium text-on-surface-variant text-body-md">Coghlan, Saavedra, J.B. Justo</h4>
+                <span class="text-label-sm italic text-outline">Ver más</span>
+              </div>
+            </div>
+            <div class="station-item flex items-center gap-6 group" role="listitem">
+              <div class="station-dot relative w-10 flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-outline border-2 border-white z-10"></div>
+              </div>
+              <div class="flex-1 py-4 flex items-center justify-between border-b border-outline-variant/30 group-hover:bg-primary/5 transition-colors px-4 rounded-xl">
+                <h4 class="font-medium text-on-surface-variant text-body-md">Florida, Cetrángolo</h4>
+                <span class="material-symbols-outlined station-action-icon text-outline group-hover:text-primary transition-colors" aria-hidden="true">chevron_right</span>
+              </div>
+            </div>
+            <div class="station-item flex items-center gap-6 group" role="listitem">
+              <div class="station-dot relative w-10 flex flex-col items-center">
+                <div class="w-4 h-4 rounded-full bg-primary border-4 border-white shadow-md z-10 group-hover:scale-125 transition-transform"></div>
+              </div>
+              <div class="flex-1 py-4 flex items-center justify-between bg-primary/5 px-4 rounded-xl">
+                <div>
+                  <h4 class="font-bold text-primary text-body-lg">Bartolomé Mitre</h4>
+                  <p class="text-label-sm text-secondary font-bold">Combinación Tren de la Costa</p>
+                </div>
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">flag</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Details Panel (Right Column) -->
+        <div class="lg:col-span-5 flex flex-col gap-gutter">
+          <div class="bg-secondary-container text-on-secondary-container rounded-3xl p-8 relative overflow-hidden group">
+            <div class="relative z-10">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined" aria-hidden="true">swap_calls</span>
+                <h3 class="text-headline-md font-headline-md">Conexión Estratégica</h3>
+              </div>
+              <p class="mb-6 font-medium text-body-md">En la terminal <span class="font-bold">Bartolomé Mitre</span> podés combinar con el <span class="underline">Tren de la Costa</span> (Estación Maipú) para viajar hacia Tigre disfrutando de la costa del río.</p>
+              <button type="button" class="bg-on-secondary-container text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:opacity-90 transition-opacity">
+                <span class="material-symbols-outlined" aria-hidden="true">map</span> VER RECORRIDO COSTA
+              </button>
+            </div>
+            <span class="material-symbols-outlined absolute -bottom-8 -right-8 text-[160px] opacity-10 transform -rotate-12 group-hover:rotate-0 transition-transform duration-500" aria-hidden="true">directions_subway</span>
+          </div>
+          <div class="bg-surface-container rounded-3xl p-8 border border-outline-variant">
+            <h3 class="text-headline-md font-headline-md text-primary mb-6">Horarios y Frecuencias</h3>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                  <span class="material-symbols-outlined" aria-hidden="true">wb_sunny</span>
+                </div>
+                <div>
+                  <p class="font-bold text-on-surface">Días Hábiles</p>
+                  <p class="text-label-sm text-on-surface-variant">Primer tren: 7:01 | Último tren: 20:49</p>
+                  <p class="text-label-sm font-bold text-primary mt-1">Frecuencia pico: 25 - 35 min</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                  <span class="material-symbols-outlined" aria-hidden="true">weekend</span>
+                </div>
+                <div>
+                  <p class="font-bold text-on-surface">Sábados, Domingos y Feriados</p>
+                  <p class="text-label-sm text-on-surface-variant">Primer tren: 07:15 | Último tren: 21:30</p>
+                  <p class="text-label-sm font-bold text-primary mt-1">Frecuencia: 30 min</p>
+                </div>
+              </div>
+            </div>
+            <hr class="my-6 border-outline-variant">
+            <button type="button" class="w-full py-4 border-2 border-primary text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all">
+              <span class="material-symbols-outlined" aria-hidden="true">download</span> DESCARGAR PDF COMPLETO
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- Footer -->
+  <footer role="contentinfo" class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant mt-16">
+    <div class="w-full py-12 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between gap-8">
+      <div class="flex flex-col gap-4">
+        <span class="text-label-md font-label-md font-bold text-primary">Trenes Argentinos</span>
+        <p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">Brindando servicios ferroviarios eficientes para el desarrollo del transporte nacional.</p>
+        <div class="flex gap-4 mt-2">
+          <a class="text-on-surface-variant hover:text-primary transition-all" href="#" aria-label="Visitar sitio web institucional"><span class="material-symbols-outlined" aria-hidden="true">public</span></a>
+          <a class="text-on-surface-variant hover:text-primary transition-all" href="#" aria-label="Enviar un correo"><span class="material-symbols-outlined" aria-hidden="true">mail</span></a>
+          <a class="text-on-surface-variant hover:text-primary transition-all" href="#" aria-label="Llamar al servicio de atención"><span class="material-symbols-outlined" aria-hidden="true">call</span></a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="flex flex-col gap-3">
+          <p class="text-label-md font-bold text-on-surface">Institucional</p>
+          <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Contacto</a>
+          <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">App Mi Tren</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <p class="text-label-md font-bold text-on-surface">Legal</p>
+          <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Términos y Condiciones</a>
+          <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacidad</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <p class="text-label-md font-bold text-on-surface">Redes</p>
+          <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Facebook</a>
+          <a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full py-6 px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant/30 text-center md:text-left">
+      <p class="text-label-sm font-label-sm text-on-surface-variant">© 2026 Trenes Argentinos - Ministerio de Transporte</p>
+    </div>
+  </footer>
+  <!-- FAB (Contextual for Ticket Purchase/SUBE) -->
+  <button type="button" class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform z-40" aria-label="Comprar pasaje o tarjeta SUBE">
+    <span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">credit_card</span>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>

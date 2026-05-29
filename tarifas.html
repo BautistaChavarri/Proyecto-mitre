@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tarifas — Trenes Argentinos</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Libre+Franklin:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e2e2e2",
+            "surface-dim": "#dadada",
+            "secondary-fixed-dim": "#78d1ff",
+            "on-primary-container": "#ebf2ff",
+            "surface-variant": "#e2e2e2",
+            "secondary": "#006689",
+            "on-secondary-container": "#004d69",
+            "secondary-fixed": "#c3e8ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#f1f0ff",
+            "on-primary-fixed-variant": "#00497b",
+            "surface-container-high": "#e8e8e8",
+            "status-normal": "#2E7D32",
+            "outline-variant": "#c0c7d2",
+            "on-primary-fixed": "#001d35",
+            "on-background": "#1a1c1c",
+            "primary": "#005994",
+            "on-tertiary-fixed-variant": "#3d4569",
+            "on-secondary": "#ffffff",
+            "background": "#f9f9f9",
+            "on-primary": "#ffffff",
+            "surface-bright": "#f9f9f9",
+            "primary-fixed-dim": "#9ccaff",
+            "tertiary-fixed": "#dde1ff",
+            "inverse-surface": "#2f3131",
+            "on-surface": "#1a1c1c",
+            "background-alt": "#EEEEEE",
+            "tertiary-fixed-dim": "#bdc4f0",
+            "surface-tint": "#0062a1",
+            "on-error-container": "#93000a",
+            "surface": "#f9f9f9",
+            "inverse-primary": "#9ccaff",
+            "on-error": "#ffffff",
+            "secondary-container": "#34c3fe",
+            "inverse-on-surface": "#f1f1f1",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f3f3f3",
+            "tertiary": "#4c5479",
+            "primary-fixed": "#d0e4ff",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#eeeeee",
+            "primary-container": "#0072bb",
+            "on-secondary-fixed-variant": "#004d68",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#646c93",
+            "on-secondary-fixed": "#001e2c",
+            "outline": "#717882",
+            "on-tertiary-fixed": "#11193b",
+            "status-alert": "#EE3D44",
+            "on-surface-variant": "#404751",
+            "status-warning": "#FFD700"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            base: "8px",
+            "margin-desktop": "32px",
+            "container-max": "1200px",
+            "margin-mobile": "16px",
+            gutter: "24px"
+          },
+          fontFamily: {
+            "label-md": ["Montserrat"],
+            "body-md": ["Libre Franklin"],
+            "headline-lg-mobile": ["Montserrat"],
+            "label-sm": ["Montserrat"],
+            "headline-md": ["Montserrat"],
+            "body-lg": ["Libre Franklin"],
+            "headline-lg": ["Montserrat"],
+            "display-lg": ["Montserrat"]
+          },
+          fontSize: {
+            "label-md": ["14px", { lineHeight: "20px", fontWeight: "600" }],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+            "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  <header role="banner" class="bg-primary dark:bg-on-primary-fixed fixed top-0 w-full z-50">
+    <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
+      <div class="flex items-center gap-8">
+        <span class="text-label-md font-label-md font-bold text-on-primary">Trenes Argentinos - Mitre</span>
+        <nav class="hidden md:flex gap-6" aria-label="Menú principal">
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="index.html">Ramales</a>
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="mapas.html">Mapas</a>
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="horarios.html">Horarios</a>
+          <a class="nav-link nav-active text-on-primary font-medium transition-colors font-label-md text-label-md" href="tarifas.html" aria-current="page">Tarifas</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-4">
+        <form role="search" aria-label="Buscar estación" class="bg-white/10 rounded-lg px-3 py-1.5 flex items-center gap-2">
+          <span class="material-symbols-outlined" aria-hidden="true">search</span>
+          <label class="sr-only" for="search-input">Buscar estación</label>
+          <input id="search-input" class="bg-transparent border-none text-on-primary placeholder-on-primary/60 text-label-sm focus:ring-0 w-32 md:w-48" placeholder="Buscar estación..." type="search">
+        </form>
+        <button type="button" class="text-on-primary cursor-pointer" aria-label="Abrir perfil">
+          <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="flex-1 px-4 md:px-margin-desktop py-8 max-w-5xl mx-auto pt-20">
+    <section class="mb-12">
+      <h1 class="text-headline-lg font-headline-lg text-primary mb-2">Tarifas</h1>
+      <p class="text-on-surface-variant font-body-md mb-6">Valores vigentes · Medio de pago: SUBE</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+        <div class="bg-primary text-white rounded-2xl p-6 flex flex-col gap-4 shadow-sm border border-primary/20">
+          <p class="text-label-sm font-bold uppercase">Tarifa general</p>
+          <p class="text-display-lg font-bold">$500</p>
+          <p class="text-label-sm">Por sección recorrida. El valor puede variar según origen y destino.</p>
+        </div>
+        <div class="bg-secondary-fixed rounded-2xl p-6 flex flex-col gap-4 shadow-sm border border-secondary/10 text-center">
+          <p class="text-label-sm font-bold uppercase text-on-surface-variant">Jubilados / Pensionados</p>
+          <p class="text-headline-lg font-bold text-primary">$0</p>
+          <p class="text-label-sm text-on-surface-variant">Gratuito con SUBE registrada vinculada a haberes previsionales.</p>
+        </div>
+        <div class="bg-surface-container rounded-2xl p-6 flex flex-col gap-4 shadow-sm border border-outline-variant text-center">
+          <p class="text-label-sm font-bold uppercase text-on-surface-variant">Discapacidad</p>
+          <p class="text-headline-lg font-bold text-primary">$0</p>
+          <p class="text-label-sm text-on-surface-variant">Gratuito con SUBE registrada y certificado de discapacidad vigente.</p>
+        </div>
+        <div class="bg-primary-fixed rounded-2xl p-6 flex flex-col gap-4 shadow-sm border border-primary-fixed text-center">
+          <p class="text-label-sm font-bold uppercase text-on-surface-variant">Menores de 4 años</p>
+          <p class="text-headline-lg font-bold text-primary">$0</p>
+          <p class="text-label-sm text-on-surface-variant">Gratuito acompañado de un adulto con SUBE registrada.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-surface-container rounded-2xl p-6 border border-outline-variant shadow-sm">
+        <p class="text-on-surface-variant text-body-md"><strong>Medio de pago:</strong> únicamente con tarjeta <strong>SUBE</strong>. Se descuenta al salir por el molinete en la estación de destino. Asegurate de tener saldo suficiente antes de abordar. Las tarifas pueden actualizarse periódicamente.</p>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-4 mt-6">
+        <button type="button" class="bg-primary text-on-primary px-6 py-3 rounded-xl font-label-md font-bold hover:bg-primary-container transition-colors">Ver tarifas oficiales</button>
+        <button type="button" class="border-2 border-primary text-primary px-6 py-3 rounded-xl font-label-md font-bold hover:bg-primary/5 transition-colors">Recargar SUBE</button>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant mt-16">
+    <div class="w-full py-6 px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+      <p class="text-label-sm font-label-sm text-on-surface-variant">© 2026 Trenes Argentinos - Ministerio de Transporte</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
