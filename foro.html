@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Horarios — Trenes Argentinos</title>
+  <title>Accesibilidad — Trenes Argentinos</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Libre+Franklin:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -106,28 +106,24 @@
 </head>
 <body class="bg-surface text-on-surface font-body-md">
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
-  <!-- Barra de navegación superior - Se queda fija al hacer scroll -->
   <header role="banner" class="bg-primary dark:bg-on-primary-fixed fixed top-0 w-full z-50">
     <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
       <div class="flex items-center gap-8">
         <span class="text-label-md font-label-md font-bold text-on-primary">Trenes Argentinos - Mitre</span>
-        <!-- Menú de navegación principal -->
         <nav class="hidden md:flex gap-6" aria-label="Menú principal">
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="index.html">Ramales</a>
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="mapas.html">Mapas</a>
-          <a class="nav-link nav-active text-on-primary font-medium transition-colors font-label-md text-label-md" href="horarios.html" aria-current="page">Horarios</a>
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="horarios.html">Horarios</a>
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="tarifas.html">Tarifas</a>
-          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="foro.html">Accesibilidad</a>
+          <a class="nav-link nav-active text-on-primary font-medium transition-colors font-label-md text-label-md" href="foro.html" aria-current="page">Accesibilidad</a>
         </nav>
       </div>
       <div class="flex items-center gap-4">
-        <!-- Buscador de estaciones -->
         <form role="search" aria-label="Buscar estación" class="bg-white/10 rounded-lg px-3 py-1.5 flex items-center gap-2">
           <span class="material-symbols-outlined" aria-hidden="true">search</span>
           <label class="sr-only" for="search-input">Buscar estación</label>
           <input id="search-input" class="bg-transparent border-none text-on-primary placeholder-on-primary/60 text-label-sm focus:ring-0 w-32 md:w-48" placeholder="Buscar estación..." type="search">
         </form>
-        <!-- Botón de perfil -->
         <button type="button" class="text-on-primary cursor-pointer" aria-label="Abrir perfil">
           <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
         </button>
@@ -137,121 +133,107 @@
 
   <main id="main-content" class="flex-1 px-4 md:px-margin-desktop py-8 max-w-5xl mx-auto pt-20">
     <section class="mb-12">
-      <h1 class="text-headline-lg font-headline-lg text-primary mb-2">Horarios</h1>
-      <p class="text-on-surface-variant font-body-md mb-6">Primer y último tren según el tipo de día</p>
+      <h1 class="text-headline-lg font-headline-lg text-primary mb-2">Accesibilidad</h1>
+      <p class="text-on-surface-variant font-body-md mb-8">Características de accesibilidad para personas con discapacidad en el Tren Mitre</p>
 
-      <!-- Tabs -->
-      <div class="flex gap-8 mb-6 border-b border-outline-variant">
-        <button id="tab-weekday" class="tab-button text-body-md font-medium pb-3 border-b-2 border-primary text-primary active-tab" aria-selected="true" aria-controls="content-weekday">Lunes a Viernes</button>
-        <button id="tab-weekend" class="tab-button text-body-md font-medium pb-3 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors" aria-selected="false" aria-controls="content-weekend">Sábados, Domingos y Feriados</button>
+      <!-- Movilidad reducida -->
+      <div class="bg-white rounded-3xl p-8 border border-outline-variant shadow-sm mb-6">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">accessible</span>
+          <div class="flex-1">
+            <h2 class="text-headline-md font-headline-md text-primary mb-3">Acceso para personas con movilidad reducida</h2>
+            <ul class="text-body-md text-on-surface-variant space-y-2">
+              <li>✓ Ascensores en las estaciones principales para acceso a andenes</li>
+              <li>✓ Rampas de acceso en estaciones con desniveles pronunciados</li>
+              <li>✓ Puertas automáticas de mayor ancho para permitir el paso de sillas de ruedas</li>
+              <li>✓ Espacios reservados dentro de los vagones para sillas de ruedas y muletas</li>
+              <li>✓ Asientos preferenciales con suficiente espacio de movimiento</li>
+              <li>✓ Barandillas y pasamanos en todas las áreas de circulación</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="bg-white rounded-3xl p-8 border border-outline-variant shadow-sm">
-        <!-- Contenido Lunes a Viernes -->
-        <div id="content-weekday" class="tab-content" role="tabpanel" aria-labelledby="tab-weekday">
-          <div class="border-l-4 border-primary pl-4 mb-6">
-            <h2 class="font-headline-md text-headline-md">Retiro - B. Mitre</h2>
-          </div>
-    
-          <div class="overflow-x-auto">
-            <table class="w-full text-left">
-              <thead>
-                <tr class="bg-primary text-on-primary">
-                  <th class="py-3 px-4 text-label-md">Recorrido</th>
-                  <th class="py-3 px-4 text-label-md">Primer tren</th>
-                  <th class="py-3 px-4 text-label-md">Último tren</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-b border-outline-variant/30">
-                  <td class="py-4 px-4 text-body-md">Retiro – B. Mitre</td>
-                  <td class="py-4 px-4 text-body-md">7:01</td>
-                  <td class="py-4 px-4 text-body-md">20:49</td>
-                </tr>
-                <tr class="bg-surface-container-low border-b border-outline-variant/30">
-                  <td class="py-4 px-4 text-body-md">B. Mitre – Retiro</td>
-                  <td class="py-4 px-4 text-body-md">7:17</td>
-                  <td class="py-4 px-4 text-body-md">21:34</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-
-
-          <div class="mt-6 bg-status-warning/10 border-l-4 border-status-warning p-4 rounded">
-            <p class="text-on-surface-variant text-label-sm">⚠ Horarios orientativos. Verificá en <a class="font-bold text-primary underline" href="https://argentina.gob.ar/transporte">argentina.gob.ar/transporte</a></p>
+      <!-- Personas ciegas y con baja visión -->
+      <div class="bg-white rounded-3xl p-8 border border-outline-variant shadow-sm mb-6">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="material-symbols-outlined text-secondary text-3xl">visibility_off</span>
+          <div class="flex-1">
+            <h2 class="text-headline-md font-headline-md text-secondary mb-3">Acceso para personas ciegas y con baja visión</h2>
+            <ul class="text-body-md text-on-surface-variant space-y-2">
+              <li>✓ Señalización en braille en estaciones y dentro de los trenes</li>
+              <li>✓ Anuncios audibles de estaciones en los vagones</li>
+              <li>✓ Indicadores sonoros en ascensores y puertas de emergencia</li>
+              <li>✓ Líneas táctiles en los andenes para guía segura</li>
+              <li>✓ Personal de estación capacitado para asistencia</li>
+              <li>✓ Zonas de embarque claramente delimitadas</li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <!-- Contenido Sábados, Domingos y Feriados -->
-        <div id="content-weekend" class="tab-content hidden" role="tabpanel" aria-labelledby="tab-weekend">
-          <div class="border-l-4 border-primary pl-4 mb-6">
-            <h2 class="font-headline-md text-headline-md">Retiro - B. Mitre</h2>
-          </div>
-    
-          <div class="overflow-x-auto">
-            <table class="w-full text-left">
-              <thead>
-                <tr class="bg-primary text-on-primary">
-                  <th class="py-3 px-4 text-label-md">Recorrido</th>
-                  <th class="py-3 px-4 text-label-md">Primer tren</th>
-                  <th class="py-3 px-4 text-label-md">Último tren</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-b border-outline-variant/30">
-                  <td class="py-4 px-4 text-body-md">Retiro – B. Mitre</td>
-                  <td class="py-4 px-4 text-body-md">6:19</td>
-                  <td class="py-4 px-4 text-body-md">21:19</td>
-                </tr>
-                <tr class="bg-surface-container-low border-b border-outline-variant/30">
-                  <td class="py-4 px-4 text-body-md">B. Mitre – Retiro</td>
-                  <td class="py-4 px-4 text-body-md">6:18</td>
-                  <td class="py-4 px-4 text-body-md">21:47</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-
-          <div class="mt-6 bg-status-warning/10 border-l-4 border-status-warning p-4 rounded">
-            <p class="text-on-surface-variant text-label-sm">⚠ Horarios orientativos. Verificá en <a class="font-bold text-primary underline" href="https://argentina.gob.ar/transporte">argentina.gob.ar/transporte</a></p>
+      <!-- Personas sordas e hipoacúsicas -->
+      <div class="bg-white rounded-3xl p-8 border border-outline-variant shadow-sm mb-6">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="material-symbols-outlined text-status-alert text-3xl">hearing_disabled</span>
+          <div class="flex-1">
+            <h2 class="text-headline-md font-headline-md text-status-alert mb-3">Acceso para personas sordas e hipoacúsicas</h2>
+            <ul class="text-body-md text-on-surface-variant space-y-2">
+              <li>✓ Paneles de información con subtítulos en estaciones</li>
+              <li>✓ Señales visuales de emergencia en vagones</li>
+              <li>✓ Servicios de intérprete de lengua de signos (previa solicitud)</li>
+              <li>✓ Sistema de información visual con avisos de estaciones</li>
+              <li>✓ Personal de estación capacitado en comunicación alternativa</li>
+            </ul>
           </div>
         </div>
+      </div>
+
+      <!-- Servicios adicionales -->
+      <div class="bg-white rounded-3xl p-8 border border-outline-variant shadow-sm mb-6">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+          <div class="flex-1">
+            <h2 class="text-headline-md font-headline-md text-primary mb-3">Servicios de apoyo</h2>
+            <ul class="text-body-md text-on-surface-variant space-y-2">
+              <li>✓ Perros guía permitidos en todo el servicio</li>
+              <li>✓ Asistencia personal en estaciones para facilitar acceso</li>
+              <li>✓ Plataformas de acceso niveladoras en estaciones seleccionadas</li>
+              <li>✓ Teléfono de atención para consultas sobre accesibilidad: <strong>0800-122-TREN</strong></li>
+              <li>✓ Información en formato accesible en nuestra página web</li>
+              <li>✓ Tarifa reducida para acompañantes de personas con discapacidad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Información sobre tarifas -->
+      <div class="bg-secondary-fixed rounded-3xl p-8 border border-secondary/20 shadow-sm">
+        <h2 class="text-headline-md font-headline-md text-on-surface mb-4">Beneficios y tarifas para personas con discapacidad</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-label-md text-label-md text-primary font-bold mb-2">Viaje gratuito</h3>
+            <p class="text-body-md text-on-surface-variant">Con certificado de discapacidad vigente y SUBE registrada vinculada al trámite.</p>
+          </div>
+          <div>
+            <h3 class="font-label-md text-label-md text-primary font-bold mb-2">Acompañante</h3>
+            <p class="text-body-md text-on-surface-variant">Una persona acompañante disfruta de tarifa reducida cuando viaja con persona certificada.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contacto y reclamos -->
+      <div class="mt-8 bg-status-warning/10 border-l-4 border-status-warning p-6 rounded-lg">
+        <h3 class="text-label-md font-bold text-on-surface mb-2">¿Problemas de accesibilidad?</h3>
+        <p class="text-body-md text-on-surface-variant">Si experimentás dificultades de acceso o necesitás reportar problemas con las características de accesibilidad, comunicate con:</p>
+        <ul class="mt-4 space-y-1 text-body-md">
+          <li><strong>Teléfono:</strong> 0800-122-TREN (0800-122-8736)</li>
+          <li><strong>Email:</strong> accesibilidad@trenmitre.com.ar</li>
+          <li><strong>En estación:</strong> Dirigite a la oficina de información</li>
+        </ul>
       </div>
     </section>
   </main>
-
-  <script>
-    // Sistema simple de pestañas para horarios
-    document.addEventListener('DOMContentLoaded', function() {
-      const botones = document.querySelectorAll('.tab-button');
-      
-      botones.forEach(boton => {
-        boton.addEventListener('click', function() {
-          // Ocultar todo primero
-          document.querySelectorAll('.tab-content').forEach(contenido => {
-            contenido.classList.add('hidden');
-          });
-          
-          // Desactivar todos los botones
-          botones.forEach(btn => {
-            btn.classList.remove('text-primary', 'border-primary');
-            btn.classList.add('text-on-surface-variant', 'border-transparent');
-          });
-          
-          // Activar solo el seleccionado
-          this.classList.add('text-primary', 'border-primary');
-          this.classList.remove('text-on-surface-variant', 'border-transparent');
-          
-          // Mostrar contenido correspondiente
-          const id = this.getAttribute('aria-controls');
-          document.getElementById(id).classList.remove('hidden');
-        });
-      });
-    });
-  </script>
 
   <footer role="contentinfo" class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant mt-16">
     <div class="w-full py-6 px-margin-desktop max-w-container-max mx-auto text-center md:text-left">

@@ -106,24 +106,28 @@
 </head>
 <body class="bg-surface text-on-surface font-body-md">
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
-  <!-- TopAppBar -->
   <header role="banner" class="bg-primary dark:bg-on-primary-fixed fixed top-0 w-full z-50">
+    <!-- Barra de navegación superior - Se queda fija al hacer scroll -->
     <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
       <div class="flex items-center gap-8">
         <span class="text-label-md font-label-md font-bold text-on-primary">Trenes Argentinos - Mitre</span>
+        <!-- Menú de navegación principal -->
         <nav class="hidden md:flex gap-6" aria-label="Menú principal">
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="index.html">Ramales</a>
           <a class="nav-link nav-active text-on-primary font-medium transition-colors font-label-md text-label-md" href="mapas.html" aria-current="page">Mapas</a>
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="horarios.html">Horarios</a>
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="tarifas.html">Tarifas</a>
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="foro.html">Accesibilidad</a>
         </nav>
       </div>
       <div class="flex items-center gap-4">
+        <!-- Buscador de estaciones -->
         <form role="search" aria-label="Buscar estación" class="bg-white/10 rounded-lg px-3 py-1.5 flex items-center gap-2">
           <span class="material-symbols-outlined" aria-hidden="true">search</span>
           <label class="sr-only" for="search-input">Buscar estación</label>
           <input id="search-input" class="bg-transparent border-none text-on-primary placeholder-on-primary/60 text-label-sm focus:ring-0 w-32 md:w-48" placeholder="Buscar estación..." type="search">
         </form>
+        <!-- Botón de perfil -->
         <button type="button" class="text-on-primary cursor-pointer" aria-label="Abrir perfil">
           <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
         </button>

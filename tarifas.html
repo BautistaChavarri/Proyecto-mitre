@@ -106,23 +106,28 @@
 </head>
 <body class="bg-surface text-on-surface font-body-md">
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  <!-- Barra de navegación superior - Se queda fija al hacer scroll -->
   <header role="banner" class="bg-primary dark:bg-on-primary-fixed fixed top-0 w-full z-50">
     <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
       <div class="flex items-center gap-8">
         <span class="text-label-md font-label-md font-bold text-on-primary">Trenes Argentinos - Mitre</span>
+        <!-- Menú de navegación principal -->
         <nav class="hidden md:flex gap-6" aria-label="Menú principal">
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="index.html">Ramales</a>
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="mapas.html">Mapas</a>
           <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="horarios.html">Horarios</a>
           <a class="nav-link nav-active text-on-primary font-medium transition-colors font-label-md text-label-md" href="tarifas.html" aria-current="page">Tarifas</a>
+          <a class="nav-link text-on-primary/80 font-medium hover:text-secondary-container transition-colors font-label-md text-label-md" href="foro.html">Accesibilidad</a>
         </nav>
       </div>
       <div class="flex items-center gap-4">
+        <!-- Buscador de estaciones -->
         <form role="search" aria-label="Buscar estación" class="bg-white/10 rounded-lg px-3 py-1.5 flex items-center gap-2">
           <span class="material-symbols-outlined" aria-hidden="true">search</span>
           <label class="sr-only" for="search-input">Buscar estación</label>
           <input id="search-input" class="bg-transparent border-none text-on-primary placeholder-on-primary/60 text-label-sm focus:ring-0 w-32 md:w-48" placeholder="Buscar estación..." type="search">
         </form>
+        <!-- Botón de perfil -->
         <button type="button" class="text-on-primary cursor-pointer" aria-label="Abrir perfil">
           <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
         </button>
@@ -163,10 +168,10 @@
       </div>
 
       <div class="flex flex-col md:flex-row gap-4 mt-6">
-        <button type="button" class="bg-primary text-on-primary px-6 py-3 rounded-xl font-label-md font-bold hover:bg-primary-container transition-colors">Ver tarifas oficiales</button>
+        <a href="https://www.trenmitre.com.ar/img/tarifas-retiro-suarez-tren-mitre.pdf" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-6 py-3 rounded-xl font-label-md font-bold hover:bg-primary-container transition-colors text-center">Ver tarifas oficiales</a>
         <button type="button" class="border-2 border-primary text-primary px-6 py-3 rounded-xl font-label-md font-bold hover:bg-primary/5 transition-colors">Recargar SUBE</button>
       </div>
-    </section>
+    </section>  
   </main>
 
   <footer role="contentinfo" class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant mt-16">
